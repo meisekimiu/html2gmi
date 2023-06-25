@@ -34,3 +34,7 @@ export const headingTag: TagTransformer = (node: Node, text: string) => {
 export const liTag: TagTransformer = (_node: Node, text: string) => {
   return '* ' + text + '\n';
 };
+
+export const qTag: TagTransformer = (_node: Node, text: string) => {
+  return '"' + text + '"';
+};
