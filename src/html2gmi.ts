@@ -20,6 +20,7 @@ export class Html2Gmi {
   >();
   protected linkBuffer: HTMLAnchorElement[] = [];
   private depth: number = 0;
+  private blankedOutLastElement: boolean = false;
   constructor(protected documentText: string) {
     const parser = new DOMParser();
     this.document = parser.parseFromString(documentText, 'text/html');
@@ -58,7 +59,11 @@ export class Html2Gmi {
 
   protected unwrapTextContent(child: Node): string {
     let nodeValue = child.nodeValue ?? '';
-    nodeValue = nodeValue.trimStart();
+    if (this.blankedOutLastElement) {
+      nodeValue = nodeValue.trimStart();
+    } else {
+      nodeValue = nodeValue.replace(/^\s+/, ' ');
+    }
     nodeValue = nodeValue.replace(/\r/gm, ''); // Remove carriage returns if written on windows
     nodeValue = nodeValue.replace(/([^\n]|^)\s*\n+\s*([^\n]|$)/gm, '$1 $2'); // Convert groups of newlines between characters to spaces
     nodeValue = nodeValue.replace(/^\s+$/gm, ''); // Remove completely empty whitespace content (indents/gaps between tags/etc)
@@ -89,11 +94,14 @@ export class Html2Gmi {
           text += this.unwrapTextContent(child);
         } else {
           this.depth++;
-          text += this.convertChild(child);
+          const childContents = this.convertChild(child);
+          text += childContents;
+          this.blankedOutLastElement = childContents.length === 0;
           this.depth--;
         }
         if (this.depth === 0) {
           text += this.getLinkBuffer();
+          this.blankedOutLastElement = false;
         }
       }
     }

@@ -26,7 +26,7 @@ export const aTag: TagTransformer = (
       element.setAttribute('data-gmi-content', footnoteText);
       converter.addLinkToBuffer(element);
     }
-    return text + ' ';
+    return text;
   } else {
     converter.addLinkToBuffer(element);
     return '';
