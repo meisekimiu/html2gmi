@@ -53,3 +53,11 @@ export const divTag: TagTransformer = (_node: Node, text: string) => {
   }
   return text + '\n';
 };
+
+export const kbdTag: TagTransformer = (_node: Node, text: string) => {
+  return '`' + text + '` ';
+};
+
+export const brTag: TagTransformer = () => {
+  return '\n\n';
+};

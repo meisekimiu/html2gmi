@@ -38,6 +38,10 @@ export class Html2Gmi {
     this.elementHandlers.set('H6', Handlers.headingTag);
     this.elementHandlers.set('Q', Handlers.qTag);
     this.elementHandlers.set('DIV', Handlers.divTag);
+    this.elementHandlers.set('BR', Handlers.brTag);
+    this.elementHandlers.set('CODE', Handlers.kbdTag);
+    this.elementHandlers.set('KBD', Handlers.kbdTag);
+    this.elementHandlers.set('VAR', Handlers.kbdTag);
 
     this.specialHandlers.set('link-collection', handleLinkCollection);
   }
