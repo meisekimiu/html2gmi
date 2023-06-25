@@ -1,6 +1,9 @@
 import { transformLink } from './link';
 import { handleLinkCollection } from './linkcollection';
 import * as Handlers from './taghandlers';
+import { JSDOM } from 'jsdom';
+
+global.DOMParser = new JSDOM().window.DOMParser;
 
 type TagTransformer = Handlers.TagTransformer;
 

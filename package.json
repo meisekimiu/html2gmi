@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "description": "A utility created for mew151.net to convert HTML pages to gemtext",
   "main": "build/index.js",
+  "bin": {
+    "html2gmi": "build/src/bin.js"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "start": "npm run build && node build/index.js",
+    "start": "npm run build && node build/src/bin.js",
     "test": "jest"
   },
   "author": "Natalie Martin",
