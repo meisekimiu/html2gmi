@@ -1,0 +1,28 @@
+# Natalie's Accordion Corner
+
+This area of my site is dedicated to one of my favorite instruments: The Accordion! These days, the accordion seems to be a pretty niche instrument. A lot of people even straight up hate accordions. I want this to be a space where I can passionately write about the accordion and my journey learning it!
+
+=> collection.gmi My Accordions
+=> faq.gmi Accordion FAQ
+=> blog Squeeze Blog
+
+## Why Accordion?
+
+I just thing it's a really cool and fun instrument! It's like a handheld organ you can take anywhere! It's pretty versatile as a solo instrument. And you get to hug your instrument all the time. :)
+
+I think most importantly... it's just super fun and exciting to play. The accordion is a complex piece of machinery and getting your hands to coordinate and operate it properly feels almost like you're controlling a weird steampunk mechanism... that makes music! The movement of the bellows also in a way forces you to physically entrain with the music you're playing in a way that makes it more satisfying to play the accordion compared to some other instruments I play.
+
+## Accordion WWW Linkz
+
+=> https://www.youtube.com/channel/UCuAKiLqtxYnvtJnKlL_1nJg My Youtube Channel
+=> https://nydana.se/accordion.html Nydana's Accordion Resources
+=> https://github.com/3araht/giabalanai Giabalanai: A Chromatic Button Accordion Mechanical Keyboard MIDI Controller
+=> https://www.youtube.com/c/JacksonParodi Jackson Parodi (Youtube)
+=> https://www.youtube.com/c/charanporantan_official Charan Po Rantan (Youtube)
+=> https://www.youtube.com/c/moshezuchter/ Ronen from Accordion Love (Youtube)
+=> https://www.youtube.com/c/MrACCORDION Mr. ACCORDION (Youtube)
+
+## Coming Soon:
+
+* Accordion Sheet Music
+* More? Idk!

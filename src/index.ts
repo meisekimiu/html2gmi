@@ -1,1 +1,1 @@
-console.log('hello world');
+export { Html2Gmi } from './html2gmi';
