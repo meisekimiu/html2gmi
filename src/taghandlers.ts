@@ -16,8 +16,16 @@ export const aTag: TagTransformer = (
 ) => {
   const element = node as Element;
   const href = element.getAttribute('href');
-  const dropLink = element.hasAttribute('data-gmi-drop-link');
+  const dropLink =
+    element.hasAttribute('data-gmi-drop-link') ||
+    element.hasAttribute('data-gmi-footnote');
   if (!href || dropLink) {
+    if (element.hasAttribute('data-gmi-footnote')) {
+      const footnoteText =
+        element.getAttribute('data-gmi-footnote') ?? element.textContent ?? '';
+      element.setAttribute('data-gmi-content', footnoteText);
+      converter.addLinkToBuffer(element);
+    }
     return text + ' ';
   } else {
     converter.addLinkToBuffer(element);

@@ -50,4 +50,14 @@ Have you ever gone to example.com?
     );
     expect(converter.convert()).toBe('=> example.gmi Link');
   });
+  it('has support for data-gmi-footnote style of links', () => {
+    const converter = new Html2Gmi(
+      generateHtml(
+        `<p>Have you ever heard of <a href="https://example.com" data-gmi-footnote="Example.com">Example.com?</a>`
+      )
+    );
+    expect(converter.convert()).toBe(`Have you ever heard of Example.com?
+
+=> https://example.com Example.com`);
+  });
 });
