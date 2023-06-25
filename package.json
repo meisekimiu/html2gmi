@@ -1,6 +1,6 @@
 {
   "name": "html2gmi",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A utility created for mew151.net to convert HTML pages to gemtext",
   "main": "build/index.js",
   "bin": {

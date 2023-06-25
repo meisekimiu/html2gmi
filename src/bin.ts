@@ -6,4 +6,4 @@ import { Html2Gmi } from './html2gmi';
 const options = parseArguments();
 const filecontents = fs.readFileSync(options.input, 'utf-8');
 const converter = new Html2Gmi(filecontents);
-console.log(converter.convert());
+process.stdout.write(converter.convert());
