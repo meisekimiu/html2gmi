@@ -38,7 +38,7 @@ export class Html2Gmi {
     this.specialHandlers.set('link-collection', handleLinkCollection);
   }
 
-  public runHandler(node: Node, text: string): string {
+  protected runHandler(node: Node, text: string): string {
     if (this.elementHandlers.has(node.nodeName)) {
       const handler = this.elementHandlers.get(node.nodeName);
       if (handler) {
@@ -48,7 +48,7 @@ export class Html2Gmi {
     return text;
   }
 
-  public unwrapTextContent(child: Node): string {
+  protected unwrapTextContent(child: Node): string {
     let nodeValue = child.nodeValue ?? '';
     nodeValue = nodeValue.trimStart();
     nodeValue = nodeValue.replace(/\r/gm, ''); // Remove carriage returns if written on windows
@@ -57,7 +57,7 @@ export class Html2Gmi {
     return nodeValue;
   }
 
-  public convertChild(node: Node): string {
+  protected convertChild(node: Node): string {
     let text = '';
     const element = node as Element;
     if (element.hasAttribute('data-gmi-ignore')) {
