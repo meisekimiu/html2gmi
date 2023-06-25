@@ -95,12 +95,12 @@ export class Html2Gmi {
     return this.runHandler(node, text);
   }
 
-  public convert(): string | null {
+  public convert(): string {
     const main = this.document.querySelector('main');
     if (main) {
-      return this.convertChild(main).trimEnd();
+      return this.convertChild(main).trim();
     }
-    return null;
+    return '';
   }
 
   public addLinkToBuffer(element: Element): void {
