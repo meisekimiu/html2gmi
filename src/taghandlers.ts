@@ -46,3 +46,10 @@ export const liTag: TagTransformer = (_node: Node, text: string) => {
 export const qTag: TagTransformer = (_node: Node, text: string) => {
   return '"' + text + '"';
 };
+
+export const divTag: TagTransformer = (_node: Node, text: string) => {
+  if (text.endsWith('\n')) {
+    return text;
+  }
+  return text + '\n';
+};

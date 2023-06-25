@@ -37,6 +37,7 @@ export class Html2Gmi {
     this.elementHandlers.set('H5', Handlers.headingTag);
     this.elementHandlers.set('H6', Handlers.headingTag);
     this.elementHandlers.set('Q', Handlers.qTag);
+    this.elementHandlers.set('DIV', Handlers.divTag);
 
     this.specialHandlers.set('link-collection', handleLinkCollection);
   }
